@@ -5,3 +5,4 @@
 - Updated cards value and displayed on Product Dashboard
 - Created NavBar and Cart page
 - Created Routes
+- Created cartSlice, store

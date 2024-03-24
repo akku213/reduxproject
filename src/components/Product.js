@@ -24,7 +24,7 @@ const Project = () => {
         
       </Card.Body>
       <Card.Footer style={{background : 'white'}}>
-      <Button variant="primary">Add to Cart</Button>
+      <Button variant="primary" onClick={()=> addToCart(product)}>Add to Cart</Button>
       </Card.Footer>
     </Card>
     </div>
