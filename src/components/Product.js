@@ -1,16 +1,30 @@
 import { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useDispatch, useSelector } from 'react-redux';
+import {add} from '../store/cartSlice';
+import { getProducts } from '../store/productSlice';
 
-const Project = () => {
+const Product = () => {
+  const dispatch = useDispatch();
+  
+ useEffect(() => {
+    dispatch(getProducts());
+  },[dispatch]);
 
-  const [products, getProducts] = useState([]);
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products')
-    .then(data => data.json())
-    .then(result => getProducts(result));
-  },[]);
-
+  const  {data: products, status} = useSelector(state => state.products);
+  
+  if(status==='loading'){
+    return <p>Loading...</p>
+  }
+  if(status==='error'){
+    return <p>Something went wrong...</p>
+  }
+  
+  
+  const addToCart = (product) =>{
+    dispatch(add(product));
+  }
 
   const cards = products.map(product =>(
     <div className='col-md-3' style={{marginBottom: '10px'}}>
@@ -41,4 +55,4 @@ const Project = () => {
   )
 }
 
-export default Project;
+export default Product;

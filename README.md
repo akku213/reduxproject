@@ -6,3 +6,5 @@
 - Created NavBar and Cart page
 - Created Routes
 - Created cartSlice, store
+- Added items to redux store and updated cart using dispatch
+- removed item from cart
