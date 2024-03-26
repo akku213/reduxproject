@@ -17,7 +17,7 @@ const Cart = () => {
       </div>
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-         <Card.Text>INR: {product.price}</Card.Text>
+         <Card.Text>Inr: {product.price}</Card.Text>
         
       </Card.Body>
       <Card.Footer style={{background : 'white'}}>
