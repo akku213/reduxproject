@@ -34,6 +34,3 @@ export const getProducts =  createAsyncThunk('products/get' , async () => {
     const result = await data.json();
     return result;
 })
-
-// export function getProducts(){
-//     return async function getProductsThunk(dispatch, getState){
