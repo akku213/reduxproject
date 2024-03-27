@@ -9,7 +9,7 @@ const NavBar = () => {
   return (
     <Navbar expand="lg" bg="light">
       <Container fluid>
-        <Navbar.Brand href="#">Redux Toolkit</Navbar.Brand>
+        <Navbar.Brand href="#">Redux Toolkit Project</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
           <Nav className="me-auto">
